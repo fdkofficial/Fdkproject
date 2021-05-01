@@ -26,7 +26,7 @@ SECRET_KEY = 'm4z4p^q2!(o1t=++woi2+v6hub(2&z&s)&^2m!$j)7=d9)&)hv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','fdkofficial.herokuapp.com']
 
 
 # Application definition
