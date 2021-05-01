@@ -1,0 +1,25 @@
+.row .card:hover{
+    transform: scale(1);
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
+    cursor:pointer;
+    background-color: white;
+    color: white;
+  }
+  .row #card2:hover{
+    transform: scale(1);
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
+    cursor:pointer;
+    background-color: rgb(20, 20, 20);
+    color: white;
+  }
+  .nav-item:hover{
+    font-size: large;
+    color: tomato;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #h1:hover{
+    font-size: 50px;
+    text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
+    color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
