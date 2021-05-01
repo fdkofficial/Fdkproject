@@ -1,1 +1,1 @@
-web: gunicorn Fdkproject.wsgi
+web: gunicorn Fdkproject.wsgi --log-file -
