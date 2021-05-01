@@ -64,8 +64,8 @@
 <center><h1 style="color:white"><b>Choose Category : </h1></b></center>
     <div class="row">
     {% for product in cate %}
-<div class="card my-2 mx-4" style="width: 18rem;background-color:black;">
-  <img class="card-img-top"style='width:270px;height:300px;' src="/media/{{product.img}}" alt="Card image cap">
+<div class="card my-2 mx-4" style="width: 17.5rem;background-color:black;">
+  <img class="card-img-top"style='width:260px;height:300px;' src="/media/{{product.img}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{product.title}}</h5>
     <button style='border-radius: 8%;
@@ -79,8 +79,8 @@
 <center><h1 style='color:white;'> All Products Here </h1></center>
 <div class="row">
 {% for product in allpr %}
-<div class="card my-2 mx-4" style="width: 18rem;background-color:black;">
-  <img class="card-img-top"style='width:270px;height:300px;' src="/media/{{product.pr_img}}" alt="Card image cap">
+<div class="card my-2 mx-4" style="width: 17.5rem;background-color:black;">
+  <img class="card-img-top"style='width:260px;height:300px;' src="/media/{{product.pr_img}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{product.pr_name}}</h5>
     <p class="card-text">{{product.pr_desc}}</p>
