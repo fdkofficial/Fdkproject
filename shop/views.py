@@ -95,6 +95,13 @@ def cartview(request,id):
         save1.save()
     vir=review.objects.filter(idr=id)
     return render(request,'shop/cartviewprd.html',{'product':product,'vir':vir})
+def search(request):
+    if request.method == 'POST':
+        query=request.POST.get('query')
+        product1=Product.objects.filter(pr_name__icontains=query)
+        product2=Product.objects.filter(pr_desc__icontains=query)
+        product = product1.union(product2)
+    return render(request,'shop/search.html',{'product':product})
 # def reviews(request):
 #     if request.method == 'POST':
 #         Username=User.objects.get(username=request.user)

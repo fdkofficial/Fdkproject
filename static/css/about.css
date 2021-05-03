@@ -14,8 +14,8 @@ body{
 }
 
 .about-section{
-    background:url(/static/images/pic.jpg) no-repeat left;
-    background-size: 55%;
+    background:url(/static/images/pic.jpg) no-repeat;
+    background-size: 100%;
     background-color: #000000fd;
     overflow: hidden;
     padding: 100px 0;
@@ -23,8 +23,8 @@ body{
 
 .inner-container{
     width: 55%;
-    float: right;
-    background: linear-gradient(to right,  #31529c 0%, #eb466b 100%);
+    float: left;
+    background: linear-gradient(to right,  #b0bedd 0%, #1285b3 100%);
     padding: 150px;
 }
 

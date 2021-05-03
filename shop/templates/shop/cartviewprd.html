@@ -71,33 +71,43 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="categ">Store</a>
-              </li>
+                <a class="nav-link" href="{%url 'Category' %}">Store</a>
+              </li> {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'cart' %}">My Cart</a>
+              </li>{% endif %}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   More
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="about/">About us</a></li>
-                  <li><a class="dropdown-item" href="contactUs/">Contact us</a></li>
+                  <li><a class="dropdown-item" href="{%url 'About' %}">About us</a></li>
+                  <li><a class="dropdown-item" href="{%url 'Contactus' %}">Contact us</a></li>
                 </ul>
               </li>
               
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form method='POST' action="{%url 'Search' %}" class="d-flex"> {% csrf_token %}
+              <input style='width: 235%;margin-left: -175%;' class="form-control me-2" type="search" name='query' placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             {% if user.is_authenticated %}
             <li class="nav-item dropdown">
-                <a style='color:white;margin-top:-18%;margin-left:6%;border:solid;border-radius:25px;' class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a style='width:auto;color:white;margin-top:-15%;margin-left:6%;border:solid;border-radius:25px;background:#198754;border-width:0px' class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Welcome {{request.user}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="signout">Logout</a></li>
                 </ul>
               </li>
-            {% endif %}
+            {% else %}
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Login
+            </button>
+            <button type="button" class="btn btn-success mr-2" data-bs-toggle="modal" data-bs-target="#SignupModal">
+                SignUp
+            </button>{% endif %}
           </div>
         </div>
     </nav>

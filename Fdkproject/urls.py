@@ -28,9 +28,9 @@ urlpatterns = [
     path('',views.homepage),
     path('shop/',include('shop.urls')),
     path('blogs/',include('blog.urls')),
-    path('signup/',views.signup,name='handlesignup'),
-    path('signin/',views.signin),
-    path('signout/',views.logout1),
+    path('signup/',views.signup,name='signup1'),
+    path('signin/',views.signin,name='signin1'),
+    path('signout/',views.logout1,name='logout1'),
     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
