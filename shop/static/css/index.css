@@ -23,3 +23,23 @@
     color: cornflowerblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+  @media (max-width:1175px){
+    .raw .card{
+      width: 70%;
+      margin-left: 23%;
+    }}
+    @media (max-width:785px){
+      #card-row{
+        margin-left: 11%;
+        width: 100%;
+      }
+    }
+    @media (max-width:375px){
+      #card-row{
+        margin-left: 11%;
+        width: 50%%;
+      }
+    }
+  #htrr{
+    image-orientation: 45%;
+  }
