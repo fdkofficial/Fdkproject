@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href={% static 'css/index.css' %}> 
@@ -105,12 +105,12 @@
               
             </ul>
             <form method='POST' action='shop/search/' class="d-flex"> {% csrf_token %}
-              <input style='width: 235%;margin-left: -175%;' class="form-control me-2" type="search" name='query' placeholder="Search" aria-label="Search">
+              <input  class="form-control me-2" type="search" name='query' id='query' placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             {% if user.is_authenticated %}
             <li class="nav-item dropdown">
-                <a style='width:auto;color:white;margin-top:-15%;margin-left:6%;border:solid;border-radius:25px;background:#198754;border-width:0px' class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="welcome" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Welcome {{request.user}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -177,7 +177,8 @@
 </div><br>
 <center><h2 style='color:white;'>Books From Here </h2></center>
 <div class='row'>
-<div class="card" id='card2' style="width: 18rem;height:37rem;margin-left:2%;"mx-2>
+  <div class="col">
+<div class="card my-2 mx-2" id='card2'>
   <img src="/media/shop/image/hp (4).jpg"style='height:380px;' class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">The Vampire Dairies</h5>
@@ -185,8 +186,9 @@
     <a href="#" class="btn btn-primary">Comming Soon</a>
   </div>
 </div>
+</div>
 <div class ='col'>
-<div class="card"id='card2' style="width: 18rem;height:37rem;margin-left:4%;">
+<div class="card my-2 mx-2"id='card2' >
   <img src="/media/shop/image/hp (1).jpg" style='height:380px;' class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Harry Potter</h5>
@@ -196,7 +198,7 @@
 </div>
 </div>
 <div class ='col'>
-<div class="card"id='card2' style="width: 18rem;height:37rem;">
+<div class="card my-2 mx-2"id='card2'>
   <img src="/media/shop/image/hp (2).jpg"style='height:380px;' class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Oz</h5>
@@ -206,7 +208,7 @@
 </div>
 </div>
 <div class ='col'>
-<div class="card"id='card2' style="width: 18rem;height:37rem;">
+<div class="card my-2 mx-2"id='card2'>
   <img src="/media/shop/image/hp (3).jpg"style='height:380px;' class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">50 Shades of Gray</h5>

@@ -11,6 +11,9 @@
     cursor:pointer;
     background-color: rgb(20, 20, 20);
     color: white;
+    width: 17.5rem;
+    height:37rem;
+    margin-left:2%;
   }
   .nav-item:hover{
     font-size: large;
@@ -22,6 +25,20 @@
     text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
     color: cornflowerblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #welcome{
+    width:auto;
+    color:white;
+    margin-top:-15%;
+    margin-left:6%;
+    border:solid;
+    border-radius:25px;
+    background:#198754;
+    border-width:0px;
+  }
+  #query{
+    width: 235%;
+    margin-left: -175%;
   }
 /* @media (max-width:1175px){
     .raw .card{
@@ -47,3 +64,28 @@
 
       }
     } */
+
+    #cart{
+      margin-top: -15%;
+      margin-left: 120px;
+    }
+    @media (max-width:375px){
+      #query{
+        width: 83%;
+        margin-left: 1%;
+    }
+    .row #card2{
+      width: 22.5rem;
+      height: 36rem;
+      }
+      #welcome{
+        width: 52%;
+        margin-top: -58%;
+        margin-left: 120%;
+      }
+      #cart{
+        margin-top: -58%;
+        margin-left: 120px;
+      }
+    }
+    
