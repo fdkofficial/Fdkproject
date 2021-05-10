@@ -72,8 +72,15 @@
     <button style='border-radius: 8%;
     border-color: blue;
     background: #0D6EFD;' data-Category='{{product.id}}'>
-    <a href="{%url 'cartview' product.id %}" class="btn btn-primary">View Product</a>
+    <a href="{%url 'cartview' product.id %}" class="btn btn-primary">View Product</a></button>
   </div>
+    <button style='border-radius: 8%;
+    border-color: blue;
+    margin-top: 164%;
+    margin-left: 159px;
+    position: absolute;
+    background: #0D6EFD;' data-Category='{{product.id}}'>
+    <a href="{%url 'delete' product.id %}" class="btn btn-primary">Remove</a></button>
 </div>
   {% endfor %}
 </div>

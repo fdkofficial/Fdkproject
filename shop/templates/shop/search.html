@@ -30,21 +30,52 @@
 
     <div class="row">
     {% for product in product %}
-<div class="card my-2 mx-4" style="width: 18rem;background-color:black;">
-  <img class="card-img-top"style='width:270px;height:300px;' src="/media/{{product.pr_img}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{product.pr_name}}</h5>
-    <p class="card-text">{{product.pr_desc}}</p>
-    <p class="card-text">{{product.pr_price}}</p>
-    <p class="card-text">{{product.pr_date}}</p>
+<section class="product"style='background:black'>
+	<div class="product__photo">
+		<div class="photo-container">
+			<div class="photo-main">
+				<div class="controls">
+					<i class="material-icons">share</i>
+					<i class="material-icons">FDK-Cart</i>
+				</div>
+				<img id='img1'style='height:471px;margin-left:60px;' src="/media/{{product.pr_img}}" alt="green apple slice">
+			</div>
+        
+		</div>
+	</div>
+	<div class="product__info">
+		<div class="title">
+			<h1 style='color:white;'>{{product.pr_name}}</h1>
+			<span style='color:white;'>Code: 45999</span>
+		</div>
+		<div class="price">
+			 <span style='color:white;'>Rs {{product.pr_price}}/-</span>
+		</div>
+		<div class="variant">
+			<h3 style='color:white;'>SELECT A COLOR</h3>
+			<ul>
+				<li style='color:white;'>Red</li>
+				<li style='color:white;'>Yellow</li>
+				<li style='color:white;'>Blue</li>
+				<li style='color:white;'>Green</li>
+			</ul>
+		</div>
+		<div class="description">
+			<h3 style='color:white;'>{{product.pr_desc}}</h3>
+
+		</div>
+      <p style='color:white;' class="card-text">{{product.pr_date}}</p>
     <button style='border-radius: 8%;
     border-color: blue;
     background: #0D6EFD;' data-Category='{{product.id}}'>
-    <a href="{%url 'cartview' product.id %}" class="btn btn-primary">View Product</a>
+    <a href="{%url 'vp' product.id %}"style='width:120px;' class="btn btn-primary">View Product</a>
   </div>
+	</div>
 </div>
-  {% endfor %}
+{% endfor %}
 </div>
+</section>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

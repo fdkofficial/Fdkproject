@@ -110,3 +110,11 @@ def search(request):
 #         save1.save()
 #     return redirect('/')
 # Create your views here.
+def delete(request,id):
+    product=usercart.objects.filter(id=id)
+    product.delete()
+    return redirect('/')
+def profile(request,id):
+    product=product.objects.all()
+    return render('shop/profile.html',{'product':product})
+    

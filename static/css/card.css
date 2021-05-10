@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .box{
+    width: 133px;
+    height: 200px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.197); 
+    background: white;
+    overflow: hidden;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    }
+    .box div{
+    width: 150px;
+    height: 200px;
+    }
+    .box div img{
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    border-radius: 10px;
+    box-shadow: 00 20px rgba(0,0,0, 0.197);
+    transition: transform .4s;
+    }
+    .box:hover div img{
+    transform: scale(0.8) translateY(10px);
+    }
+    .box p{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translate(-50%, 20px);
+    transition: all .4s;
+    color: rgb(236, 16, 16);
+    }
+    .box:hover p{
+    transition-delay: .2s;
+    transform: translate(-50%, -5px);
+    color: rgb(236, 13, 13);
+    }
+
+
+
+
+
+
+    <div class='main'id='box'>
+<div class='box'id='box1'>
+<div>
+<img src='/media/shop/image/hp (4).jpg'>
+</div>
+<p>The Vampire Dairies</p>
+</div>
+<div class='box'>
+<div>
+<img src='/media/shop/image/hp (1).jpg'>
+</div>
+<p>Harry Potter</p>
+</div>
+<div class='box'>
+<div>
+<img src='/media/shop/image/hp (2).jpg'>
+</div>
+<p>Wizard of Oz</p>
+</div>
+<div class='box'>
+<div>
+<img src='/media/shop/image/hp (3).jpg'>
+</div>
+<p>50 Shades of grey</p>
+</div>
+</div>

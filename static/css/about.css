@@ -24,7 +24,7 @@ body{
 .inner-container{
     width: 55%;
     float: left;
-    background: linear-gradient(to right,  #b0bedd 0%, #1285b3 100%);
+    background: linear-gradient(to right,  #b0bedd 0%, #f9fbfc 100%);
     padding: 150px;
 }
 
@@ -36,7 +36,7 @@ body{
 
 .text{
     font-size: 13px;
-    color: #fffdfd;
+    color: #080808;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
