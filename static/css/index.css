@@ -27,7 +27,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   #welcome{
-    width:auto;
+    width: 174px;
     color:white;
     margin-left:6%;
     border:solid;
@@ -36,7 +36,7 @@
     border-width:0px;
   }
   #query{
-    width: 205%;
+    width: 195%;
     margin-left: -135%;
   }
 /* @media (max-width:1175px){
@@ -69,25 +69,22 @@
       margin-left: 120px;
     }
     @media (max-width:375px){
-      #query{
-        width: 49%;
+		#query{
+        width: 87%;
         margin-left: 0%;
     }
+
+	}
     .row #card2{
       width: 22.5rem;
       height: 36rem;
       }
-      #welcome{
-        width: 52%;
-        margin-top: -77%;
-        margin-left: 29%;
-      }
+      
       #cart{
-        margin-top: -58%;
+        margin-top: -15%;
         margin-left: 120px;
       }
-    }
-    
+	  }
 
 /* ----- Variables ----- */
 $color-primary: #4c4c4c;
@@ -286,20 +283,5 @@ h3 {
 
 	&:active {
 		transform: scale(0.97);
-	}
-}
-
-/* ----- Footer Section ----- */
-footer {
-	padding: 1em;
-	text-align: center;
-	color: #fff;
-
-	a {
-		color: $color-primary;
-
-		&:hover {
-			color: $color-highlight;
-		}
 	}
 }

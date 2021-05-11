@@ -17,8 +17,7 @@ def signup(req):
         myuser.save()
         messages.success(req,"You are a member")
         return redirect('/')
-    else:
-        return HttpResponse("Invalid")
+    return render(req,"shop/login.html")
 def signin(req):
     if req.method == 'POST':
         Login_username=req.POST['loginUsername']
@@ -30,7 +29,7 @@ def signin(req):
             return redirect('/')
         else:
             messages.error(req,'Incorrect Username/Password')
-    return redirect('/')
+    return render(req,'shop/login.html')
 def logout1(req):
     logout(req)
     messages.success(req,"You are logged out")
