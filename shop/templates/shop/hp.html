@@ -51,12 +51,8 @@
               </li>
               
             </ul>
-            <form method='POST' action='shop/search/' class="d-flex"> {% csrf_token %}
-              <input  class="form-control me-2" type="search" name='query' id='query' placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
             {% if user.is_authenticated %}
-            <li class="dropdown">
+            <li class=" dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="welcome" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Welcome {{request.user}}
                 </a>
@@ -80,6 +76,10 @@
 {% endfor %}
 {% endif %}
     <br>
+    <form method='POST' action='shop/search/' class="d-flex"> {% csrf_token %}
+              <input  class="form-control me-2" type="search" name='query' id='query' placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
     <center><h1 id='h1' style='color:white'>Welcome to FDK-Cart</h1></center></br>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -139,21 +139,21 @@
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <div class="sport_product">
                      <figure><img src={% static "images/basketball.png" %} alt="img"/></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
+                    <h3> Rs<strong class="price_text">150</strong>/-</h3>
                      <h4>basket ball</h4>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
                   <div class="sport_product">
                      <figure><img src={% static "images/t-shirt.png" %} alt="img"/ ></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
+                    <h3> Rs<strong class="price_text">600</strong>/-</h3>
                      <h4> T-Shirt</h4>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
                   <div class="sport_product">
                      <figure><img src={% static "images/game.png" %} alt="img"/></figure>
-                     <h3> $<strong class="price_text">50</strong></h3>
+                     <h3> Rs<strong class="price_text">580</strong>/-</h3>
                      <h4>Game</h4>
                   </div>
                </div>

@@ -8,4 +8,5 @@ admin.site.register(Moreimages)
 admin.site.register(review)
 admin.site.register(Buy)
 admin.site.register(usercart)
+admin.site.register(logindata)
 # Register your models here.

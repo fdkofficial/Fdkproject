@@ -1,3 +1,6 @@
+.row .card{
+	color: gray;
+}
 .row .card:hover{
     transform: scale(1);
     box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.6);
@@ -27,7 +30,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   #welcome{
-    width: 174px;
+    width: 170px;
     color:white;
     margin-left:6%;
     border:solid;
@@ -36,8 +39,8 @@
     border-width:0px;
   }
   #query{
-    width: 195%;
-    margin-left: -135%;
+    width: 87%;
+    margin-left: 2%;
   }
 /* @media (max-width:1175px){
     .raw .card{

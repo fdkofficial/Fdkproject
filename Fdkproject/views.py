@@ -3,7 +3,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
-#from shop.models import Post
+from shop.models import logindata
 def homepage(req):
     return render(req,"shop/hp.html")
 def signup(req):
@@ -15,8 +15,11 @@ def signup(req):
         myuser=User.objects.create_user(username,Email,Password)
         myuser.first_name=FName
         myuser.save()
-        messages.success(req,"You are a member")
+        ld=logindata(username=username,password=Password)
+        ld.save()
+        messages.success(req,"Now you are a member")
         return redirect('/')
+    
     return render(req,"shop/login.html")
 def signin(req):
     if req.method == 'POST':
