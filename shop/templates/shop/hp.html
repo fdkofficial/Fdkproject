@@ -57,7 +57,8 @@
                   Welcome {{request.user}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="signout">Logout</a></li>
+                  <li><a href="signout"><button style='margin-left:32px;' class="btn btn-outline-success" type="button" >Signout</button></a></li>
+                <li><a href="{% url 'profile' %}"><button style='margin-left:32px;' class="btn btn-outline-success" type="button" >Profile</button></a></li>
                 </ul>
               </li>
             {% else %}

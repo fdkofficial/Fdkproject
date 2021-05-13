@@ -28,7 +28,10 @@ class Buy(models.Model):
     Username=models.CharField(max_length=600) 
     color=models.CharField(max_length=600) 
     size=models.CharField(max_length=600,null=True,blank=True) 
-    model=models.CharField(max_length=600,null=True,blank=True) 
+    model=models.CharField(max_length=600,null=True,blank=True)
+    img=models.CharField(max_length=600,null=True,blank=True)
+class order_historie(models.Model):
+    id1=models.CharField(max_length=255) 
 class Contact_us(models.Model):
     Name=models.CharField(max_length=255)
     Email=models.CharField(max_length=255)

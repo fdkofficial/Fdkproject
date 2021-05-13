@@ -104,6 +104,15 @@
       <input type='phone'style='margin-left:42px;' name='color' default='{{product.color}}' value='{{product.color}}'></br></br>
       <a>model : </a>
       <input type='phone'style='margin-left:32px;' name='model' default='{{product.Model}}' value='{{product.Model}}'>
+    <input type='phone'value="{{product.pr_img}}"default="{{product.pr_img}}" style='margin-left:24px;visibility:hidden;' name='pr_img'>
+    {% if product.Categories_id == 1 %}
+    <label for='size' style='margin-left:32px;' name='size' default='{{product.size}}' value='{{product.Model}}'>
+    <Select name='size' id='size'>
+    <Option value='small'>Small</option>
+    <Option value='medium'>Medium</option>
+    <Option value='Large'>Large</option>
+    <Option value='Xl'>Xl</option>
+    </select>{% endif %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -213,18 +222,18 @@
               <td>
                 <div class="mt-1">
                   <div class="form-check form-check-inline pl-0">
-                    <input type="radio" class="form-check-input" id="small" name="materialExampleRadios"
+                    <input type="radio" class="form-check-input" id="small" value='small' name="size"
                       checked>
                     <label class="form-check-label small text-uppercase card-link-secondary"
                       for="small">Small</label>
                   </div>
                   <div class="form-check form-check-inline pl-0">
-                    <input type="radio" class="form-check-input" id="medium" name="materialExampleRadios">
+                    <input type="radio" class="form-check-input" id="medium" value='medium' name="size">
                     <label class="form-check-label small text-uppercase card-link-secondary"
                       for="medium">Medium</label>
                   </div>
                   <div class="form-check form-check-inline pl-0">
-                    <input type="radio" class="form-check-input" id="large" name="materialExampleRadios">
+                    <input type="radio" class="form-check-input" id="large" value='large' name="size">
                     <label class="form-check-label small text-uppercase card-link-secondary"
                       for="large">Large</label>
                   </div>

@@ -66,7 +66,8 @@ def buy(request):
         color=request.POST.get('color')
         model=request.POST.get('model')
         size=request.POST.get('size')
-        save2=Buy(Productdet=product,Address=Address,Contact=Contact,Username=Username,size=size,model=model,color=color)
+        img=request.POST.get('pr_img')
+        save2=Buy(Productdet=product,Address=Address,Contact=Contact,Username=Username,size=size,model=model,color=color,img=img)
         save2.save()
         messages.success(request,'Your Order has been placed')
     return redirect('/')
@@ -114,7 +115,13 @@ def delete(request,id):
     product=usercart.objects.filter(id=id)
     product.delete()
     return redirect('/')
-def profile(request,id):
-    product=product.objects.all()
-    return render('shop/profile.html',{'product':product})
+def buydelete(request,id):
+    product=Buy.objects.filter(id=id)
+    product.delete()
+    return redirect('/shop/profile')
+def profile(request):
+    Username=User.objects.get(username=request.user)
+    print(Username)
+    product=Buy.objects.filter(Username=Username)
+    return render(request,'shop/profile.html',{'product':product})
     

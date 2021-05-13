@@ -13,6 +13,7 @@ urlpatterns = [
     #path('review/',views.reviews,name='review'),
     path('<int:id>vp',views.vp,name='vp'),
     path('<int:id>delete',views.delete,name='delete'),
+    path('<int:id>buydelete',views.buydelete,name='buydelete'),
     path('Buy',views.buy,name='Buy'),
     path('cart',views.cart,name='cart'),
     path('search/',views.search,name='search'),

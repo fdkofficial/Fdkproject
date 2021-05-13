@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block profile %}
-	{% block title %}Profile Card{% endblock title %} 
+<link rel="stylesheet" href={% static 'css/profile.css' %}> 
+	{% block title %}<center><b>Your Profile</b></center>{% endblock title %} 
 <body id="prof_body">
 <div class="wrapper">
     <div class="left">
@@ -39,29 +40,26 @@
     </div>
 </div>
 <section class="yprop">
-<h1 style="margin-left: 40%;margin-top: 50%;">Your Orders </h1>
+<h1 style="margin-left: 40%;margin-top: 50%;">Order History </h1>
 <div class="home_partner_card">
 <div class='row' style="width:96%; margin-left: 9%;margin-top: 10%;">
     {% for product in product %}
 <div class="card my-2 mx-4" style="width: 18rem;background-color:black;">
-  <img class="card-img-top"style='width:270px;height:300px;' src="/media/{{product.pr_img}}" alt="Card image cap">
+  <img class="card-img-top"style='width:270px;height:300px;' src="/media/{{product.img}}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{product.pr_name}}</h5>
-    <p class="card-text">{{product.pr_desc}}</p>
-    <p class="card-text">{{product.pr_price}}</p>
-    <p class="card-text">{{product.pr_date}}</p>
+    <h5 class="card-title">{{product.Productdet}}</h5>
+    <p class="card-text">Color : {{product.color}}</p>
+    <p class="card-text">Size : {{product.size}}</p>
+    <p class="card-text">Model : {{product.model}}</p>
     <button style='border-radius: 8%;
     border-color: blue;
     background: #0D6EFD;' data-Category='{{product.id}}'>
     <a href="{%url 'cartview' product.id %}" class="btn btn-primary">View Product</a></button>
-  </div>
-    <button style='border-radius: 8%;
+  <button style='border-radius: 8%;
     border-color: blue;
-    margin-top: 164%;
-    margin-left: 159px;
-    position: absolute;
     background: #0D6EFD;' data-Category='{{product.id}}'>
-    <a href="{%url 'delete' product.id %}" class="btn btn-primary">Remove</a></button>
+    <a href="{%url 'buydelete' product.id %}" class="btn btn-primary">Remove</a></button>
+  </div> 
 </div>
   {% endfor %}
 </div>
@@ -72,92 +70,3 @@
 
 {% endblock profile %}
 
-
-
-
-<div id="plant" class="section  product">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <div class="titlepage">
-                     <h2><strong class="black"> Our</strong>  Products</h2>
-                     <span>There are many variations of passages of products available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <br>
-         <div class="clothes_main section ">
-          <div class="container">
-            <div class="row">
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div class="sport_product">
-                     <figure><img src={% static "images/basketball.png" %} alt="img"/></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src={% static "images/t-shirt.png" %} alt="img"/ ></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4> T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src={% static "images/game.png" %} alt="img"/></figure>
-                     <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
-    
-        
-       
-         
-               
-           </div>
-      </div>
-      <div id="footer" class="Address layout_padding">
-       <div class="container">
-          <div class="row">
-             <div class="col-sm-12">
-               <div class="titlepage">
-                  <div class="main">
-                     <h1 class="address_text">Address</h1>
-                  </div>
-               </div>
-             </div>
-          </div>
-               <div class="address_2">
-                  <div class="row">
-                     <div class="col-sm-12 col-md-12 col-lg-4">
-                       <div class="site_info">
-                          <span class="info_icon"><img src={% static "images/map-icon.png" %} /></span>
-                          <span style="margin-top: 10px;">No.123 Fdk-cart, Bholenath Nagar New Mumbai</span></div>
-                     </div>
-                     <div class="col-sm-12 col-md-12 col-lg-4">
-                       <div class="site_info">
-                          <span class="info_icon"><img src={% static "images/phone-icon.png" %} /></span>
-                          <span style="margin-top: 21px;">( +91 8928725750 )</span></div>
-                     </div>
-                     <div class="col-sm-12 col-md-12 col-lg-4">
-                       <div class="site_info">
-                          <span class="info_icon"><img src={% static "images/email-icon.png" %}/></span>
-                          <span style="margin-top: 21px;">khanfardeen688@gmail.com</span></div>
-                     </div>
-                     </div> 
-                  </div>
-               </div>
-                  <div class="menu_main">
-                     <div class="menu_text">
-                        <ul>
-                           <li class="active"><a href="#">Home</a></li>                         
-                           <li><a href="{% url 'About' %}">About</a></li>
-                           <li><a href="{% url 'Category' %}">Shop</a></li>
-                           <li><a href="{% url 'Contactus' %}">Contact Us</a></li>
-                        </ul>
-                     </div>
-                  </div>
-      
